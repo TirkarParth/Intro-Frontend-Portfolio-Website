@@ -57,10 +57,6 @@ h2 {
     font-weight: var(--font-weight-bold);
 }
 
-img:hover {
-    transform: scale(1.2);
-}
-
 a {
     color: var(--link-color);
 }
@@ -68,6 +64,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
+    transform: scale(1.2);
 }
 
 a:visited {
