@@ -67,6 +67,12 @@ button {
     color: #fff;
     text-decoration: none;
     padding: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 40px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
     width: 150px;
@@ -139,7 +145,7 @@ div {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    text-align: center;
+    text-align: left;
 }
 
 .page-header {
@@ -391,17 +397,6 @@ div {
             animation: slideIn 0.5s ease forwards;
 }
 
-.button-container {
-    margin: 5px auto;
-    padding: 25px 35px;
-    background: #f0f3f8;
-    border-radius: 40px;
-    border: 5px solid rgb(255, 255, 255);
-    -webkit-box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
-            box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
-    -webkit-animation: slideIn 0.5s ease forwards;
-            animation: slideIn 0.5s ease forwards;
-}
 
 .table {
     margin: 5px auto;
@@ -413,6 +408,13 @@ div {
             box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
     -webkit-animation: slideIn 0.5s ease forwards;
             animation: slideIn 0.5s ease forwards;
+}
+
+/* Add borders to table cells */
+.table td,
+.table th {
+    border: 1px solid #000; /* You can customize the border color and thickness here */
+    padding: 8px; /* Add padding to make the content within cells spaced */
 }
 
 .profile {
@@ -623,45 +625,13 @@ textarea {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: transparent;
-    background-color: transparent;
-    border: 2px solid transparent;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    outline: none;
-    margin: 0 auto;
-    border-radius: 10px;
-}
-
-.glory-button::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background-color: transparent;
-    -webkit-transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
-    -o-transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
-    transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
-    border-radius: 50%;
-    z-index: 1;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-}
-
-.glory-button:hover::before {
-    width: 0;
-    height: 0;
-    top: 50%;
-    left: 50%;
-}
-
-.glory-button:hover {
     color: #0c1d41;
     -webkit-box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
             box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
     background: #f0f3f8;
+    border: 2px solid transparent;
+    position: relative;
+    outline: none;
+    margin: 0 auto;
+    border-radius: 10px;
 }

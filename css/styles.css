@@ -87,6 +87,7 @@ button {
     font-family: inherit;
     background-color: var(--button-background-color);
     color: var(--font-color-primary);
+    align-items: center;
     text-decoration: none;
     padding: var(--padding-button);
     border-radius: var(--border-radius);
@@ -139,6 +140,13 @@ div {
     max-width: 1000px;
 }
 
+/* Add borders to table cells */
+.table td,
+.table th {
+    border: 1px solid #000; /* You can customize the border color and thickness here */
+    padding: 8px; /* Add padding to make the content within cells spaced */
+}
+
 .profile__portrait {
     float: left;
     width: 180px;
@@ -151,7 +159,7 @@ div {
     clear: both;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
 }
 
 .page-header {
@@ -308,7 +316,6 @@ div {
 
 .contact-form,
 .contact,
-.button-container,
 .table,
 .profile {
     margin: var(--padding-body) auto;
@@ -442,8 +449,9 @@ textarea {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: transparent;
-    background-color: transparent;
+    color: var(--primary-darker-color);
+    box-shadow: var(--box-shadow-contact-form);
+    background: var(--primary-lighter-color);
     border: 2px solid transparent;
     position: relative;
     overflow: hidden;
@@ -451,31 +459,4 @@ textarea {
     outline: none;
     margin: 0 auto;
     border-radius: 10px;
-}
-
-.glory-button::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background-color: transparent;
-    transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
-    border-radius: 50%;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-}
-
-.glory-button:hover::before {
-    width: 0;
-    height: 0;
-    top: 50%;
-    left: 50%;
-}
-
-.glory-button:hover {
-    color: var(--primary-darker-color);
-    box-shadow: var(--box-shadow-contact-form);
-    background: var(--primary-lighter-color);
 }
