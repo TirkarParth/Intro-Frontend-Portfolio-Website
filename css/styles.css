@@ -13,7 +13,7 @@
     --button-active-background-color: whitesmoke;
     --button__secondary-background-color: #e0b354;
     --button__secondary-color: #2b2b2b;
-    --background-color: #b9b8b8;
+    --background-color: #cfcece;
     --h1-color: blue;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
@@ -44,6 +44,8 @@ body {
     font-size: var(--font-size-body);
     line-height: var(--line-height-body);
     background-color: var(--background-color);
+    margin-top: 20px; /* Adjust as needed */
+    margin-bottom: 20px; /* Adjust as needed */
 }
 
 h1 {
@@ -153,6 +155,11 @@ div {
     width: 180px;
     margin-right: 40px;
     border-radius: 50%;
+}
+
+.page-main {
+    margin-top: 30px; /* Adjust as needed */
+    margin-bottom: 40px; /* Adjust as needed */
 }
 
 .page-footer,

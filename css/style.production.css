@@ -15,7 +15,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.6;
-    background-color: #b9b8b8;
+    background-color: #cfcece;
 }
 
 h1 {
@@ -136,6 +136,11 @@ div {
     width: 180px;
     margin-right: 40px;
     border-radius: 50%;
+}
+
+.page-main {
+    margin-top: 30px; /* Adjust as needed */
+    margin-bottom: 40px; /* Adjust as needed */
 }
 
 .page-footer,

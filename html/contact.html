@@ -42,53 +42,52 @@
         </div>
     </header>
 
-    <div>
+    <main class="page-main">
+        <div>
 
-        <!-- <h1>Contact</h1> -->
+            <!-- <h1>Contact</h1> -->
 
-        <div class="contact">
-            <h2>Parth Tirkar</h2>
-            <p>Platz der Republik 50</p>
-            <p>42107 Wuppertal</p>
-            <p>Deutschland</p>
-            <br>
-            <a href="tel:+4915758267269">Tel: +49 157 58267269</a>
-            <br>
-            <a href="parthtirkar@gmail.com">Email: parthtirkar@gmail.com</a>
+            <div class="contact">
+                <h2>Parth Tirkar</h2>
+                <p>Platz der Republik 50</p>
+                <p>42107 Wuppertal</p>
+                <p>Deutschland</p>
+                <br>
+                <a href="tel:+4915758267269">Tel: +49 157 58267269</a>
+                <br>
+                <a href="parthtirkar@gmail.com">Email: parthtirkar@gmail.com</a>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Contact Me</h2>
+                <form action="/submit_contact_form" method="post" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </div>
-
-        <!-- Contact Form -->
-        <div class="contact-form">
-            <h2>Contact Me</h2>
-            <form action="/submit_contact_form" method="post" id="contact-form">
-                <div class="form-group">
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone">
-                  </div>
-                  <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                  </div>
-                  <button type="submit">Submit</button>
-            </form>
-        </div>
-
-        
-
-    </div>
+    </main>
 
     <footer class="page-footer">
         <p class="glory-button">Find me on</p>
         <div class="social-media">
-            
+
             <button class="Btn">
                 <span class="svgContainer">
                     <svg fill="white" viewBox="0 0 496 512" height="1.6em">
