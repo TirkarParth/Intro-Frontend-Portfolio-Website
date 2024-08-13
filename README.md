@@ -23,7 +23,7 @@ This repository contains the source code for the personal website of Parth Tirka
 - **Role Attributes**: Specified for navigation elements to enhance the experience for users relying on assistive technologies.
 - **Semantic HTML**: Proper usage of semantic tags like `<header>`, `<nav>`, `<main>`, and `<footer>` ensures a well-structured and accessible website.
 
-## CSS Enhancements (Exercise 1.5 Updates)
+## CSS Enhancements
 The following changes have been implemented to improve the styling and user experience:
 - **CSS Reset**: Reset default browser styles to ensure consistency across different browsers.
 - **CSS Variables**: Defined custom properties for colors, making it easier to maintain and update the color scheme.
