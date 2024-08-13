@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.production.css">
+    <link rel="icon" type="image/png" href="../../favicon_io/favicon.ico">
+    <script src="../../js/tota11y.min.js"></script>
+    <script src="../../js/loadProjectStyles.js"></script>
+    <title>chat-App</title>
+</head>
+
+<body>
+    <header>
+        <div class="page-header">
+            <a href="../index.html"> <!-- Added anchor tag around the logo -->
+                <img src="../../img/PTlogo1.png" alt="logo"> <!-- Added alt text -->
+            </a>
+            <nav class="page-header__item">
+                <ul role="menubar" class="navigation-list">
+                    <li role="presentation">
+                        <a href="../index.html" role="menuitem" class="navigation-list__item">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="../about.html" role="menuitem" class="navigation-list__item">About</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="../work.html" role="menuitem"
+                            class="navigation-list__item navigation-list__item--active">Work</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="../contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+       
+    <main class="page-main main-section--projects">
+        <a class="backward-link" href="meet-App.html">
+          <span class="back-and-forward__button">&#60;</span>
+          <!-- <span class="back-and-forward__link-text">Previous: Pokedex</span> -->
+        </a>
+        <a class="forward-link" href="Pokedex.html">
+          <!-- <span class="back-and-forward__link-text">Next: MyFlix Client - React</span> -->
+          <span class="back-and-forward__button">&#62;</span>
+        </a>
+        
+        <div class="project-section">
+          <div class="project-section__container container">
+            <h2 class="project-section__heading">Project Highlights for Chat App: React Native</h2>
+              <div class="highlight">
+                <h2>Project Overview</h2>
+                <p>The Chat App is a mobile application developed using React Native and Expo, aimed at facilitating seamless communication between users. The app allows users to send text messages, share images, and share their current location. Built on the Google Firestore Database, the app ensures smooth online and offline communication. Users can also customize their chat experience by entering their name and selecting a background color for the chat screen.</p>
+              </div>
+              <div class="highlight">
+                  <h2>Technology Stack</h2>
+                  <p>This project was built using React Native, Expo, and Google Firestore. It utilizes the Gifted Chat library for creating rich chat interfaces and handles media sharing and location services, ensuring a dynamic and interactive user experience. Firebase was integrated for authentication, and data persistence was managed both online and offline.</p>
+              </div>
+              <div class="highlight">
+                  <h2>Core Features</h2>
+                  <ul>
+                      <li><strong>Text Messaging:</strong> Users can send and receive text messages in real-time, with a smooth and responsive interface.</li>
+                      <li><strong>Image Sharing:</strong> The app allows users to share images either by selecting them from their gallery or capturing new ones with the camera.</li>
+                      <li><strong>Location Sharing:</strong> Users can share their current location with others in the chat, enhancing communication.</li>
+                      <li><strong>Customization:</strong> Users can personalize their chat experience by entering their name and choosing a background color for the chat screen.</li>
+                      <li><strong>Online and Offline Functionality:</strong> The app ensures data persistence and smooth communication, even when offline, by leveraging Firestore's offline capabilities.</li>
+                  </ul>
+              </div>
+              <div class="highlight">
+                  <h2>Development & Documentation</h2>
+                  <p>During the development of the Chat App, I deepened my understanding of React Native, Expo, and Firebase integration. The project required implementing real-time data storage and synchronization, handling media files in mobile apps, and ensuring a seamless user experience with state management and offline support. Documentation was meticulously maintained to guide future development and collaboration.</p>
+              </div>
+              <div class="highlight">
+                  <h2>Project Management</h2>
+                  <p>The project was managed using agile methodologies, ensuring iterative development and regular updates. Continuous testing and performance monitoring were integral to the development process, ensuring a high-quality user experience.</p>
+              </div>
+          </div>
+          
+          <div class="project-section__header-image-container header-image-container">
+            <img class="project-section__header-image header-image" src="../../img/Chat-App-firebase.png" alt="" />
+            <img class="project-section__header-image header-image" src="../../img/Chat Browser.png" alt="" />
+            <img class="project-section__header-image header-image" src="../../img/Chat Discover Connection type.png" alt="" />
+            <img class="project-section__header-image header-image" src="../../img/Chat-Discover Device.png" alt="" />
+            <img class="project-section__header-image header-image" src="../../img/Chat-Users.png" alt="" />
+            <!-- <img class="project-section__header-image header-image" src="../../img/meet-APP1.png" alt="" /> -->
+          </div>
+
+          <ul class="project-section__links">
+            <li class="project-section__link-item">
+              Github Repository:
+              <a class="project-links" href="https://github.com/TirkarParth/Chat-App">
+                https://github.com/TirkarParth/Chat-App
+              </a>
+            </li>
+          </ul>
+          
+          <h2 class="project-section__technology-heading">Project Technology</h2>
+            <ul class="project-section__technology-list">
+              <li class="project-section__technology-item">
+                <strong>React Native:</strong> The core framework used for building the mobile application. React Native enables the development of cross-platform mobile apps using JavaScript and React.
+            </li>
+            <li class="project-section__technology-item">
+                <strong>Expo:</strong> A framework and platform for universal React applications. Expo provides a set of tools and services to develop, build, and deploy React Native apps more efficiently.
+            </li>
+            <li class="project-section__technology-item">
+                <strong>Google Firestore:</strong> A real-time NoSQL cloud database that allows for scalable and flexible data storage and synchronization across devices.
+            </li>
+            <li class="project-section__technology-item">
+                <strong>Firebase Authentication:</strong> Used for managing user authentication and providing a secure sign-in experience.
+            </li>
+            <li class="project-section__technology-item">
+                <strong>Gifted Chat Library:</strong> A third-party library for React Native that simplifies the creation of rich chat interfaces with features like message bubbles and input fields.
+            </li>
+            <li class="project-section__technology-item">
+                <strong>Image Picker:</strong> Enables users to select images from their device’s gallery or take new photos with the camera.
+            </li>
+            <li class="project-section__technology-item">
+                <strong>Location Services:</strong> Allows users to share their current location with other users in the chat, leveraging the device’s GPS capabilities.
+            </li>
+            <li class="project-section__technology-item">
+                <strong>Offline Support:</strong> Ensures that the app remains functional and can store data locally even when there is no internet connection.
+            </li>
+            </ul>
+
+        </div>
+      </main>
+      
+     
+    <footer id="footer-placeholder"></footer>
+
+    <script src="../../js/loadComponents.js"></script>
+  </body>
+</html>
