@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.production.css">
+    <link rel="icon" type="image/png" href="../../favicon_io/favicon.ico">
+    <script src="../../js/tota11y.min.js"></script>
+    <script src="../../js/loadProjectStyles.js"></script>
+    <title>meet-App</title>
+</head>
+
+<body>
+    <header>
+        <div class="page-header">
+            <a href="../index.html"> <!-- Added anchor tag around the logo -->
+                <img src="../../img/PTlogo1.png" alt="logo"> <!-- Added alt text -->
+            </a>
+            <nav class="page-header__item">
+                <ul role="menubar" class="navigation-list">
+                    <li role="presentation">
+                        <a href="../index.html" role="menuitem" class="navigation-list__item">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="../about.html" role="menuitem" class="navigation-list__item">About</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="../work.html" role="menuitem"
+                            class="navigation-list__item navigation-list__item--active">Work</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="../contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+       
+    <main class="page-main main-section--projects">
+        <a class="backward-link" href="myFlix-React.html">
+          <span class="back-and-forward__button">&#60;</span>
+          <!-- <span class="back-and-forward__link-text">Previous: Pokedex</span> -->
+        </a>
+        <a class="forward-link" href="Chat-App-React Native.html">
+          <!-- <span class="back-and-forward__link-text">Next: MyFlix Client - React</span> -->
+          <span class="back-and-forward__button">&#62;</span>
+        </a>
+        
+        <div class="project-section">
+          <div class="project-section__container container">
+            <h2 class="project-section__heading">Project Highlights for Meet App</h2>
+              <div class="highlight">
+                <h2>Project Overview</h2>
+                  <p>The Meet App is a serverless progressive web application (PWA) built using React, designed to provide users with seamless access to upcoming events by leveraging the Google Calendar API. The application focuses on delivering a high-performance, cross-platform experience with offline capabilities and an intuitive user interface. The key features include filtering events by city, showing/hiding event details, specifying the number of events, offline functionality, and data visualization through charts.</p>
+              </div>
+              <div class="highlight">
+                  <h2>Technology Stack</h2>
+                  <p>This project was developed using React and the Google Calendar API, supported by serverless functions on AWS Lambda. It adheres to PWA standards, ensuring offline functionality and cross-browser compatibility. Testing was a crucial aspect, with unit, integration, and end-to-end testing conducted to ensure reliability. Performance monitoring was implemented using Atatus.</p>
+              </div>
+              <div class="highlight">
+                  <h2>Core Features</h2>
+                  <ul>
+                      <li><strong>Event Filtering by City:</strong> Allows users to filter upcoming events based on their preferred city, ensuring they see relevant information.</li>
+                      <li><strong>Show/Hide Event Details:</strong> Provides users with the ability to toggle detailed views of events, offering flexibility in how much information they want to see.</li>
+                      <li><strong>Specify Number of Events:</strong> Users can customize how many events are displayed, tailoring the interface to their preferences.</li>
+                      <li><strong>Offline Functionality:</strong> As a PWA, the Meet App offers offline access to previously loaded data, ensuring usability even without an internet connection.</li>
+                      <li><strong>Data Visualization:</strong> Includes charts to visualize event-related data, offering users insights into trends and patterns.</li>
+                  </ul>
+              </div>
+              <div class="highlight">
+                  <h2>Development & Documentation</h2>
+                  <p>Throughout the development of the Meet App, I gained extensive knowledge in serverless functions, test-driven development (TDD), and progressive web applications. The project involved rigorous testing, including unit, integration, user acceptance, and end-to-end testing, to ensure a reliable and high-quality product. Documentation was thoroughly maintained, providing clear guidance for future development and collaboration.</p>
+              </div>
+              <div class="highlight">
+                  <h2>Project Management</h2>
+                  <p>Utilized continuous delivery practices to ensure frequent and reliable updates to the application. Performance monitoring was integrated to identify and address issues promptly, ensuring a smooth user experience. The project was managed using a combination of agile methodologies and thorough documentation.</p>
+              </div>
+          </div>
+          
+          <div class="project-section__header-image-container header-image-container">
+            <img class="project-section__header-image header-image" src="../../img/meet-APP2.png" alt="" />
+            <img class="project-section__header-image header-image" src="../../img/meet-APP1.png" alt="" />
+          </div>
+
+          <ul class="project-section__links">
+            <li class="project-section__link-item">
+              Github Repository:
+              <a class="project-links" href="https://github.com/TirkarParth/meet">
+                https://github.com/TirkarParth/meet
+              </a>
+            </li>
+          </ul>
+          
+          <h2 class="project-section__technology-heading">Project Technology</h2>
+            <ul class="project-section__technology-list">
+                <li class="project-section__technology-item">
+                    <strong>React:</strong> The web application is built using React, a popular JavaScript library for building user interfaces. React's component-based architecture allowed for the creation of modular and reusable UI elements.
+                </li>
+                <li class="project-section__technology-item">
+                    <strong>Google Calendar API:</strong> To integrate calendar functionality, the application leverages the Google Calendar API. This API provides access to events and enables seamless integration with Google Calendar data.
+                </li>
+                <li class="project-section__technology-item">
+                    <strong>AWS Lambda:</strong> The serverless architecture of the application is powered by AWS Lambda. This allows for scalable and cost-effective execution of server-side code without the need to manage traditional server infrastructure.
+                </li>
+                <li class="project-section__technology-item">
+                    <strong>Jest (Unit and Integration Testing):</strong> Jest, a JavaScript testing framework, was employed for both unit and integration testing. It ensures the reliability of individual components and their interactions within the application.
+                </li>
+                <li class="project-section__technology-item">
+                    <strong>Jest Cucumber (User Acceptance Testing):</strong> Jest Cucumber was utilized for user acceptance testing. This behavior-driven development (BDD) tool helps in defining and running acceptance tests written in a human-readable format.
+                </li>
+                <li class="project-section__technology-item">
+                    <strong>Puppeteer (End-to-End Testing):</strong> Puppeteer, a headless browser automation tool, was used for end-to-end testing. It allows for simulating user interactions and validating the application's behavior in a real-world browser environment.
+                </li>
+                <li class="project-section__technology-item">
+                    <strong>Atatus (Performance Monitoring):</strong> To ensure optimal performance, Atatus was employed for monitoring the application. This tool helps identify and address performance issues, ensuring a smooth user experience.
+                </li>
+            </ul>
+
+        </div>
+      </main>
+      
+     
+    <footer id="footer-placeholder"></footer>
+
+    <script src="../../js/loadComponents.js"></script>
+  </body>
+</html>
