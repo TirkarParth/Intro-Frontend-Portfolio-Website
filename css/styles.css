@@ -468,3 +468,160 @@ textarea {
     margin: 0 auto;
     border-radius: 10px;
 }
+
+/* Main section for projects */
+.main-section--projects {
+    background-color: var(--primary-lighter-color);
+    padding: 40px;
+    border-radius: var(--border-radius-contact-form);
+    box-shadow: var(--box-shadow-contact-form);
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease forwards;
+    position: relative;
+}
+
+/* Links for navigation between projects */
+  .forward-link {
+    position: fixed;
+    right: 0;
+    padding: 20px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .backward-link {
+    position: fixed;
+    left: 0;
+    padding: 20px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+.back-and-forward__button {
+    font-size: 24px;
+    width: 40px; /* Width and height to make it a circle */
+    height: 40px;
+    background-color: var(--link-color); /* Background color for the circle */
+    color: var(--background-color); /* Arrow color */
+    border-radius: 50%; /* Makes the button circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for the project content */
+.project-section {
+    padding: 20px;
+    background-color: var(--primary-darker-color);
+    color: var(--font-color-primary);
+    border-radius: var(--border-radius-contact-form);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
+}
+
+/* Header image styling */
+.header-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-image {
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-contact-form);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.header-image:hover {
+    transform: scale(1.05);
+}
+
+/* Grid items styling (Highlights) */
+.highlight {
+    background-color: var(--primary-lighter-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+    transition: transform 0.3s;
+}
+
+.highlight h2 {
+    color: var(--secondary-color);
+    font-size: var(--font-size-heading2);
+    margin-bottom: 15px;
+}
+
+.highlight p, .highlight ul {
+    color: var(--font-color-secondary);
+    font-size: var(--font-size-body);
+}
+
+.highlight ul li {
+    margin-bottom: 10px;
+}
+
+/* Hover effect for highlights */
+.highlight:hover {
+    transform: scale(1.03);
+}
+
+/* Project links */
+.project-links {
+    color: var(--link-color);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.project-links:hover {
+    color: var(--button-hover-border-color);
+}
+
+/* Zoom-in modal style */
+.zoom-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.zoom-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    border-radius: var(--border-radius);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: var(--button-hover-border-color);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

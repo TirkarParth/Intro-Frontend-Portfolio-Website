@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.production.css">
+    <link rel="icon" type="image/png" href="../../favicon_io/favicon.ico">
+    <script src="../../js/tota11y.min.js"></script>
+    <title>myFlix-API</title>
+</head>
+
+<body>
+    <header>
+        <div class="page-header">
+            <a href="../index.html"> <!-- Added anchor tag around the logo -->
+                <img src="../../img/PTlogo1.png" alt="logo"> <!-- Added alt text -->
+            </a>
+            <nav class="page-header__item">
+                <ul role="menubar" class="navigation-list">
+                    <li role="presentation">
+                        <a href="../index.html" role="menuitem" class="navigation-list__item">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="../about.html" role="menuitem" class="navigation-list__item">About</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="../work.html" role="menuitem"
+                            class="navigation-list__item navigation-list__item--active">Work</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="../contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+       
+    <main class="page-main main-section--projects">
+        <a class="backward-link" href="Pokedex.html">
+          <span class="back-and-forward__button">&#60;</span>
+          <!-- <span class="back-and-forward__link-text">Previous: Pokedex</span> -->
+        </a>
+        <a class="forward-link" href="myFlix-Angular.html">
+          <!-- <span class="back-and-forward__link-text">Next: MyFlix Client - React</span> -->
+          <span class="back-and-forward__button">&#62;</span>
+        </a>
+        
+        <div class="project-section">
+          
+          <div class="project-section__container container">
+            <h2 class="project-section__heading">Project Highlights for myFlix API</h2>
+            
+            <div class="project-section__highlight highlight">
+              <h2 class="highlight__heading">Project Overview</h2>
+              <p class="highlight__text">
+                The myFlix API is a RESTful backend service developed to power the myFlix web application. 
+                It provides users with access to an extensive database of movie information, including details 
+                on movies, directors, genres, and more.
+              </p>
+            </div>
+            
+            <div class="project-section__highlight highlight">
+              <h2 class="highlight__heading">Technology Stack</h2>
+              <p class="highlight__text">
+                This API is built using Node.js and Express, ensuring a robust and scalable server-side application. 
+                MongoDB serves as the database, enabling efficient storage and retrieval of movie-related data.
+              </p>
+            </div>
+            
+            <div class="project-section__highlight highlight">
+              <h2 class="highlight__heading">Core Features</h2>
+              <ul class="highlight__list">
+                <li class="highlight__list-item">
+                  <strong>User Authentication & Authorization:</strong> Implements secure user registration, login, 
+                  and profile management using JWT (JSON Web Token) for authentication.
+                </li>
+                <li class="highlight__list-item">
+                  <strong>Comprehensive Movie Data:</strong> Provides detailed information on movies, including 
+                  director bios, genre descriptions, and more.
+                </li>
+                <li class="highlight__list-item">
+                  <strong>Favorite Movies Management:</strong> Allows users to curate and manage their own list 
+                  of favorite movies.
+                </li>
+                <li class="highlight__list-item">
+                  <strong>Data Validation and Error Handling:</strong> Ensures that all inputs are validated and 
+                  errors are handled gracefully to improve user experience and maintain data integrity.
+                </li>
+              </ul>
+            </div>
+            
+            <div class="project-section__highlight highlight">
+              <h2 class="highlight__heading">Security</h2>
+              <p class="highlight__text">
+                Incorporates industry-standard security practices, including password hashing with bcrypt, data 
+                encryption, and secure API endpoints, to protect user data and ensure privacy.
+              </p>
+            </div>
+            
+            <div class="project-section__highlight highlight">
+              <h2 class="highlight__heading">API Documentation</h2>
+              <p class="highlight__text">
+                Thoroughly documented endpoints with Swagger, offering easy-to-understand guides for developers 
+                integrating with the API.
+              </p>
+            </div>
+            
+            <div class="project-section__highlight highlight">
+              <h2 class="highlight__heading">Deployment</h2>
+              <p class="highlight__text">
+                The myFlix API is deployed on a cloud platform, ensuring high availability, scalability, and 
+                reliability for end-users.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-section__header-image-container header-image-container">
+            <img class="project-section__header-image header-image" src="../../img/myFlix.png" alt="" />
+          </div>
+          
+          <ul class="project-section__links">
+            <li class="project-section__link-item">
+              Github Repository:
+              <a class="project-links" href="https://github.com/TirkarParth/movie_api">
+                https://github.com/MyFlixAPI
+              </a>
+            </li>
+          </ul>
+          
+          <h2 class="project-section__technology-heading">Project Technology</h2>
+          <ul class="project-section__technology-list">
+            <li class="project-section__technology-item">
+              <strong>Node.js: </strong> Allowed the use of JavaScript on the server, enabling full-stack JavaScript 
+              development.
+            </li>
+            <li class="project-section__technology-item">
+              <strong>Express: </strong> Simplified the creation of API routes and middleware.
+            </li>
+            <li class="project-section__technology-item">
+              <strong>REST API: </strong>Implemented endpoints for creating, reading, updating, and deleting data.
+            </li>
+            <li class="project-section__technology-item">
+              <strong>MongoDB: </strong>Provided flexible database schema design for storing movie, director, and genre data.
+            </li>
+            <li class="project-section__technology-item">
+              <strong>JWT Authentication: </strong>Used JSON Web Tokens for secure user sessions.
+            </li>
+            <li class="project-section__technology-item">
+              <strong>Data Validation: </strong> Incorporated validation logic to ensure data integrity.
+            </li>
+            <li class="project-section__technology-item">
+              <strong>Heroku: </strong> Provided a cloud platform for hosting the API, ensuring it is accessible online.
+            </li>
+          </ul>
+        </div>
+      </main>
+      
+     
+    <footer id="footer-placeholder"></footer>
+
+    <script src="../../js/loadComponents.js"></script>
+  </body>
+</html>
