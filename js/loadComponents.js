@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
     <p class="glory-button">Find me on</p>
         <div class="social-media">
 
+        <!-- GitHub Button -->
+        <a href="https://github.com/TirkarParth" target="_blank" rel="noopener noreferrer">
             <button class="Btn" aria-label="GitHub">
                 <span class="svgContainer">
                     <svg fill="white" viewBox="0 0 496 512" height="1.6em">
@@ -39,6 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 </span>
                 <span class="BG"></span>
             </button>
+            </a>
+
+            <!-- LinkedIn Button -->
+            <a href="https://www.linkedin.com/in/parth-tirkar-541a4678/" target="_blank" rel="noopener noreferrer">
             <button class="Btn" aria-label="LinkedIn">
                 <span class="svgContainer">
                     <svg viewBox="0 0 448 512" height="1.6em" xmlns="http://www.w3.org/2000/svg" class="svgIcon"
@@ -50,6 +56,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 </span>
                 <span class="BG1"></span>
             </button>
+            </a>
+
+            <!-- Twitter Button -->
+            <a href="https://twitter.com/tirkar_parth" target="_blank" rel="noopener noreferrer">
             <button class="Btn" aria-label="Twitter">
                 <span class="svgContainer">
                     <svg viewBox="0 0 512 512" height="1.7em" xmlns="http://www.w3.org/2000/svg" class="svgIcon"
@@ -61,6 +71,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 </span>
                 <span class="BG"></span>
             </button>
+            </a>
+
+            <!-- YouTube Button 
+            <a href="https://www.youtube.com/c/YourChannel" target="_blank" rel="noopener noreferrer">
             <button class="Btn" aria-label="YouTube">
                 <span class="svgContainer">
                     <svg viewBox="0 0 576 512" fill="white" height="1.6em" xmlns="http://www.w3.org/2000/svg">
@@ -71,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 </span>
                 <span class="BG2"></span>
             </button>
+            </a> -->
             </div>
         </div>
         `;
