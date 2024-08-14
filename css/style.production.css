@@ -5,6 +5,7 @@
 * Browsers: last 4 version
 */
 
+/* Universal Styles */
 * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -16,6 +17,8 @@ body {
     font-size: 16px;
     line-height: 1.6;
     background-color: #cfcece;
+    margin-top: 20px; /* Adjust as needed */
+    margin-bottom: 20px; /* Adjust as needed */
 }
 
 h1 {
@@ -68,14 +71,11 @@ button {
     font-family: inherit;
     background-color: #357b70;
     color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-decoration: none;
+    padding: 10px;
     border-radius: 40px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
     width: 150px;
@@ -120,7 +120,6 @@ button:active {
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, rgba(0, 73, 144, 0.5) 5px 10px 15px;
 }
 
-
 div {
     padding: 5px;
     margin: 5px;
@@ -129,6 +128,16 @@ div {
 .profile,
 .table {
     max-width: 1000px;
+}
+
+/* Add borders to table cells */
+.table td {
+    border: 1px solid #000; /* Border color from variable */
+    padding: 8px; /* Add padding to make the content within cells spaced */
+}
+.table th {
+    border: 1px solid #000; /* Border color from variable */
+    padding: 8px; /* Add padding to make the content within cells spaced */
 }
 
 .profile__portrait {
@@ -188,29 +197,50 @@ div {
     text-align: center;
 }
 
+/* Grid Layout */
 .grid {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr); /* Ensures three equal-width columns */
     grid-gap: 20px;
     -webkit-animation: slideIn 0.5s ease forwards;
             animation: slideIn 0.5s ease forwards;
 }
 
-.grid .grid__item {
+.grid__item {
     background: #f0f3f8;
     border-radius: 40px;
     padding: 25px 35px;
-    border: 5px solid rgb(255, 255, 255);
+    border: 5px solid #fff; /* Border color from variable */
     -webkit-box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
             box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
     overflow: hidden;
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: -webkit-transform 0.3s;
-    -o-transition: transform 0.3s;
-    transition: transform 0.3s;
-    transition: transform 0.3s, -webkit-transform 0.3s;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* Stack contents vertically */
+    height: 100%; /* Ensure all grid items are the same height */
+}
+
+.project-image {
+    max-width: 100%; /* Ensures the image does not exceed the width of the container */
+    height: auto; /* Maintains the aspect ratio of the image */
+    display: block; /* Ensures the image is displayed as a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+    border-radius: 4px; /* Optional: rounded corners for the image */
+    -ms-flex-negative: 0;
+        flex-shrink: 0; /* Prevent the image from shrinking */
 }
 
 .grid__item:hover {
@@ -228,39 +258,45 @@ div {
 
 .grid__text {
     opacity: 0;
-    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-    transition: opacity 0.3s, -webkit-transform 0.3s;
-    -o-transition: opacity 0.3s, transform 0.3s;
-    transition: opacity 0.3s, transform 0.3s;
-    transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
-    -webkit-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
+    transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
+    -o-transition: opacity 0.4s ease, transform 0.4s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease, -webkit-transform 0.4s ease;
+    -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+            transform: translateY(20px); /* Hide the text initially */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Background color for text */
+    color: #fff;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    z-index: 1; /* Ensure it overlays the image */
+    height: auto; /* Let the text take up only as much height as needed */
 }
 
-.grid .grid__item:nth-child(1) {
-    grid-row-start: span 2;
+.grid__item a {
+    position: relative;
+    display: block;
+    z-index: 2; /* Keep the link above the text overlay */
+    text-align: right; /* Align the link to the right */
+    text-decoration: underline; /* Ensure the link is visibly clickable */
+    color: #fff; /* Make sure the link stands out */
+    margin-top: auto; /* Push the link to the bottom */
 }
 
-.grid .grid__item:nth-child(6) {
-    grid-column-start: span 3;
-}
-
-.grid__item {
-    -webkit-transition: undefined;
-    -o-transition: undefined;
-    transition: undefined;
-    cursor: pointer;
+.grid__item a:hover {
+    color: white; /* Slightly lighter color on hover for the link */
 }
 
 @media all and (max-width: 500px) {
     .grid {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    }
-
-    .grid .grid__item:nth-child(6) {
-        grid-column-start: span 1;
     }
 }
 
@@ -269,20 +305,11 @@ div {
         -ms-grid-columns: 1fr 20px 1fr;
         grid-template-columns: 1fr 1fr;
     }
-
-    .grid .grid__item:nth-child(6) {
-        grid-column-start: span 2;
-    }
 }
 
 @media all and (max-width: 751px) {
     .grid {
         grid-gap: 10px;
-    }
-
-    .grid__item:last-child {
-        grid-column: auto / auto;
-        grid-row: auto / auto;
     }
 
     h1 {
@@ -386,7 +413,7 @@ div {
     padding: 25px 35px;
     background: #f0f3f8;
     border-radius: 40px;
-    border: 5px solid rgb(255, 255, 255);
+    border: 5px solid #fff; /* Border color from variable */
     -webkit-box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
             box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
     -webkit-animation: slideIn 0.5s ease forwards;
@@ -398,31 +425,23 @@ div {
     padding: 25px 35px;
     background: #f0f3f8;
     border-radius: 40px;
-    border: 5px solid rgb(255, 255, 255);
+    border: 5px solid #fff; /* Border color from variable */
     -webkit-box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
             box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
     -webkit-animation: slideIn 0.5s ease forwards;
             animation: slideIn 0.5s ease forwards;
 }
-
 
 .table {
     margin: 5px auto;
     padding: 25px 35px;
     background: #f0f3f8;
     border-radius: 40px;
-    border: 5px solid rgb(255, 255, 255);
+    border: 5px solid #fff; /* Border color from variable */
     -webkit-box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
             box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
     -webkit-animation: slideIn 0.5s ease forwards;
             animation: slideIn 0.5s ease forwards;
-}
-
-/* Add borders to table cells */
-.table td,
-.table th {
-    border: 1px solid #000; /* You can customize the border color and thickness here */
-    padding: 8px; /* Add padding to make the content within cells spaced */
 }
 
 .profile {
@@ -430,7 +449,7 @@ div {
     padding: 25px 35px;
     background: #f0f3f8;
     border-radius: 40px;
-    border: 5px solid rgb(255, 255, 255);
+    border: 5px solid #fff; /* Border color from variable */
     -webkit-box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
             box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
     -webkit-animation: slideIn 0.5s ease forwards;
@@ -586,14 +605,12 @@ textarea {
     border: 1px solid rgba(156, 156, 156, 0.466);
 }
 
-.BG,
-.BG1,
-.BG2 {
+.BG {
     position: absolute;
     content: "";
     width: 100%;
     height: 100%;
-    background: #181818;
+    background: #0c1d41; /* Background color from variable */
     z-index: -1;
     border-radius: 10px;
     pointer-events: none;
@@ -603,11 +620,39 @@ textarea {
 }
 
 .BG1 {
-    background: #0077b5;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #0c1d41; /* Background color from variable */
+    z-index: -1;
+    border-radius: 10px;
+    pointer-events: none;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
 }
 
 .BG2 {
-    background: #ff0000;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #0c1d41; /* Background color from variable */
+    z-index: -1;
+    border-radius: 10px;
+    pointer-events: none;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.BG1 {
+    background: #4f9d92; /* Secondary color from variable */
+}
+
+.BG2 {
+    background: #034944; /* Link color from variable */
 }
 
 .Btn:hover .BG,
@@ -630,7 +675,7 @@ textarea {
 .glory-button {
     padding: 15px 30px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #0c1d41;
@@ -639,7 +684,200 @@ textarea {
     background: #f0f3f8;
     border: 2px solid transparent;
     position: relative;
+    overflow: hidden;
+    cursor: pointer;
     outline: none;
     margin: 0 auto;
     border-radius: 10px;
+}
+
+.main-section--projects {
+    background-color: #f0f3f8;
+    padding: 40px;
+    border-radius: 40px;
+    -webkit-box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+            box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    -webkit-animation: fadeIn 0.5s ease forwards;
+            animation: fadeIn 0.5s ease forwards;
+    position: relative;
+}
+
+.forward-link {
+    position: fixed;
+    right: 0;
+    padding: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.backward-link {
+    position: fixed;
+    left: 0;
+    padding: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.back-and-forward__button {
+    font-size: 24px;
+    width: 40px; /* Width and height to make it a circle */
+    height: 40px;
+    background-color: #034944; /* Background color for the circle */
+    color: #cfcece; /* Arrow color */
+    border-radius: 50%; /* Makes the button circular */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.project-section {
+    padding: 20px;
+    background-color: #0c1d41;
+    color: #fff;
+    border-radius: 40px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
+}
+
+.header-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-image {
+    max-width: 100%;
+    border-radius: 40px;
+    -webkit-box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+            box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    cursor: pointer;
+}
+
+.header-image:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+}
+
+.highlight {
+    background-color: #f0f3f8;
+    padding: 20px;
+    border-radius: 40px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.highlight h2 {
+    color: #4f9d92;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.highlight p {
+    color: #000;
+    font-size: 16px;
+}
+
+.highlight ul {
+    color: #000;
+    font-size: 16px;
+}
+
+.highlight ul li {
+    margin-bottom: 10px;
+}
+
+.highlight:hover {
+    -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+            transform: scale(1.03);
+}
+
+.project-links {
+    color: #034944;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.project-links:hover {
+    color: white;
+}
+
+.zoom-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.zoom-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    border-radius: 40px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: white;
+}
+
+.close-modal:focus {
+    color: white;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
