@@ -32,8 +32,10 @@
     --font-size-heading1: 30px;
     --font-size-heading2: 24px;
     --padding-input: 10px;
+    --hover-timing: 0.3s;
 }
 
+/* Universal Styles */
 * {
     box-sizing: border-box;
 }
@@ -132,7 +134,6 @@ button:active {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, rgba(0, 73, 144, 0.5) 5px 10px 15px;
 }
 
-
 div {
     padding: var(--padding-body);
     margin: var(--padding-body);
@@ -146,7 +147,7 @@ div {
 /* Add borders to table cells */
 .table td,
 .table th {
-    border: 1px solid #000; /* You can customize the border color and thickness here */
+    border: 1px solid var(--font-color-secondary); /* Border color from variable */
     padding: 8px; /* Add padding to make the content within cells spaced */
 }
 
@@ -196,21 +197,36 @@ div {
     text-align: center;
 }
 
+/* Grid Layout */
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr); /* Ensures three equal-width columns */
     grid-gap: 20px;
     animation: slideIn 0.5s ease forwards;
 }
 
-.grid .grid__item {
+.grid__item {
     background: var(--primary-lighter-color);
     border-radius: var(--border-radius);
     padding: var(--padding-grid-item);
-    border: var(--border-width-grid-item) solid rgb(255, 255, 255);
+    border: var(--border-width-grid-item) solid var(--font-color-primary); /* Border color from variable */
     box-shadow: var(--box-shadow-contact-form);
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: transform var(--hover-timing) ease;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Stack contents vertically */
+    height: 100%; /* Ensure all grid items are the same height */
+}
+
+.project-image {
+    max-width: 100%; /* Ensures the image does not exceed the width of the container */
+    height: auto; /* Maintains the aspect ratio of the image */
+    display: block; /* Ensures the image is displayed as a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+    border-radius: 4px; /* Optional: rounded corners for the image */
+    flex-shrink: 0; /* Prevent the image from shrinking */
 }
 
 .grid__item:hover {
@@ -224,30 +240,37 @@ div {
 
 .grid__text {
     opacity: 0;
-    transition: opacity 0.3s, transform 0.3s;
-    transform: translateY(-100%);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(20px); /* Hide the text initially */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Background color for text */
+    color: var(--font-color-primary);
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 1; /* Ensure it overlays the image */
+    height: auto; /* Let the text take up only as much height as needed */
 }
 
-.grid .grid__item:nth-child(1) {
-    grid-row-start: span 2;
+.grid__item a {
+    position: relative;
+    display: block;
+    z-index: 2; /* Keep the link above the text overlay */
+    text-align: right; /* Align the link to the right */
+    text-decoration: underline; /* Ensure the link is visibly clickable */
+    color: var(--font-color-primary); /* Make sure the link stands out */
+    margin-top: auto; /* Push the link to the bottom */
 }
 
-.grid .grid__item:nth-child(6) {
-    grid-column-start: span 3;
-}
-
-.grid__item {
-    transition: transform var(--hover-timing);
-    cursor: pointer;
+.grid__item a:hover {
+    color: var(--button-hover-border-color); /* Slightly lighter color on hover for the link */
 }
 
 @media all and (max-width: 500px) {
     .grid {
         grid-template-columns: 1fr;
-    }
-
-    .grid .grid__item:nth-child(6) {
-        grid-column-start: span 1;
     }
 }
 
@@ -255,20 +278,11 @@ div {
     .grid {
         grid-template-columns: 1fr 1fr;
     }
-
-    .grid .grid__item:nth-child(6) {
-        grid-column-start: span 2;
-    }
 }
 
 @media all and (max-width: 751px) {
     .grid {
         grid-gap: 10px;
-    }
-
-    .grid__item:last-child {
-        grid-column: auto / auto;
-        grid-row: auto / auto;
     }
 
     h1 {
@@ -330,7 +344,7 @@ div {
     padding: var(--padding-contact-form);
     background: var(--primary-lighter-color);
     border-radius: var(--border-radius-contact-form);
-    border: var(--border-width-contact-form) solid rgb(255, 255, 255);
+    border: var(--border-width-contact-form) solid var(--font-color-primary); /* Border color from variable */
     box-shadow: var(--box-shadow-contact-form);
     animation: slideIn 0.5s ease forwards;
 }
@@ -424,7 +438,7 @@ textarea {
     content: "";
     width: 100%;
     height: 100%;
-    background: #181818;
+    background: var(--primary-darker-color); /* Background color from variable */
     z-index: -1;
     border-radius: 10px;
     pointer-events: none;
@@ -432,11 +446,11 @@ textarea {
 }
 
 .BG1 {
-    background: #0077b5;
+    background: var(--secondary-color); /* Secondary color from variable */
 }
 
 .BG2 {
-    background: #ff0000;
+    background: var(--link-color); /* Link color from variable */
 }
 
 .Btn:hover .BG,
@@ -454,7 +468,7 @@ textarea {
 .glory-button {
     padding: 15px 30px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--primary-darker-color);
@@ -469,7 +483,6 @@ textarea {
     border-radius: 10px;
 }
 
-/* Main section for projects */
 .main-section--projects {
     background-color: var(--primary-lighter-color);
     padding: 40px;
@@ -481,23 +494,22 @@ textarea {
     position: relative;
 }
 
-/* Links for navigation between projects */
-  .forward-link {
+.forward-link {
     position: fixed;
     right: 0;
     padding: 20px;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     text-decoration: none;
-  }
-  
-  .backward-link {
+}
+
+.backward-link {
     position: fixed;
     left: 0;
     padding: 20px;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     text-decoration: none;
-  }
-  
+}
+
 .back-and-forward__button {
     font-size: 24px;
     width: 40px; /* Width and height to make it a circle */
@@ -510,7 +522,6 @@ textarea {
     align-items: center;
 }
 
-/* Container for the project content */
 .project-section {
     padding: 20px;
     background-color: var(--primary-darker-color);
@@ -519,7 +530,6 @@ textarea {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
 }
 
-/* Header image styling */
 .header-image-container {
     text-align: center;
     margin-bottom: 20px;
@@ -529,7 +539,7 @@ textarea {
     max-width: 100%;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow-contact-form);
-    transition: transform 0.3s;
+    transition: transform var(--hover-timing);
     cursor: pointer;
 }
 
@@ -537,13 +547,12 @@ textarea {
     transform: scale(1.05);
 }
 
-/* Grid items styling (Highlights) */
 .highlight {
     background-color: var(--primary-lighter-color);
     padding: 20px;
     border-radius: var(--border-radius);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
-    transition: transform 0.3s;
+    transition: transform var(--hover-timing);
 }
 
 .highlight h2 {
@@ -552,7 +561,8 @@ textarea {
     margin-bottom: 15px;
 }
 
-.highlight p, .highlight ul {
+.highlight p,
+.highlight ul {
     color: var(--font-color-secondary);
     font-size: var(--font-size-body);
 }
@@ -561,12 +571,10 @@ textarea {
     margin-bottom: 10px;
 }
 
-/* Hover effect for highlights */
 .highlight:hover {
     transform: scale(1.03);
 }
 
-/* Project links */
 .project-links {
     color: var(--link-color);
     font-weight: var(--font-weight-bold);
@@ -578,7 +586,6 @@ textarea {
     color: var(--button-hover-border-color);
 }
 
-/* Zoom-in modal style */
 .zoom-modal {
     display: none;
     position: fixed;
@@ -603,9 +610,9 @@ textarea {
     position: absolute;
     top: 20px;
     right: 35px;
-    color: #fff;
+    color: var(--font-color-primary);
     font-size: 40px;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     transition: color 0.3s;
     cursor: pointer;
 }
@@ -615,7 +622,6 @@ textarea {
     color: var(--button-hover-border-color);
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -624,4 +630,3 @@ textarea {
         opacity: 1;
     }
 }
-
