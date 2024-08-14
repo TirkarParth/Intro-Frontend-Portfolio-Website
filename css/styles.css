@@ -272,6 +272,9 @@ div {
     .grid {
         grid-template-columns: 1fr;
     }
+    h1 {
+        font-size: 22px;
+    }
 }
 
 @media all and (min-width: 501px) and (max-width: 750px) {
